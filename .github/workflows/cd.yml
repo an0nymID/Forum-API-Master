@@ -15,7 +15,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcvTj3SHZCD8DrqxA6iUsTEOTwCN7/TMAPFPS44XlgTm1vvgFkI3Jr2mi0okEIklLdsmb0ciJKKUNsX08H5Clebvisw13XstkYyfqN3/o4kHO3sYjpVzT+sPueshSK8vSVCQvQ5DESUjd+X8ncBUG3IpHJn7ryD0fHAAwwiiKNTltY2O1Jp5sQCfDFNwareIUmBKc4GzhnY44O+IOkMsmxP7snrEt/T5Z2K+hVIo6R7kHHTKipggx/+y+/NNFjHQbn7j6h2SpTgksBOdW4JsTmRr0/oBAW/6It4GL8yK0zv2Cb9YJUp3eJp7TU4RlLkzyEW04Qz4qTcQlx8vfnx09b google-ssh
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/Forum-API-V2-Master
