@@ -15,7 +15,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPwD8o0fdan8fnnbBhbLi0loixllOi5LaoSHp4aWoatz9VImgNjoTiuxuUxQNGrtEIgSvegDtPWGhPqTwl+talo= google-ssh
+        key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/Forum-API-V2-Master
