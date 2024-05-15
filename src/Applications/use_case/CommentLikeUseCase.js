@@ -9,7 +9,10 @@ class CommentLikeUseCase {
   async execute(useCasePayload) {
     const postedCommentLike = new PostedCommentLike(useCasePayload);
     const { commentId, userId, threadId } = postedCommentLike;
-    await this._commentRepository.verifyCommentAvailability(commentId, threadId);
+    await this._commentRepository.verifyCommentAvailability(
+      commentId,
+      threadId,
+    );
     const verify =
       await this._commentLikeRepository.verifyCommentLikeByCommentId(
         commentId,
