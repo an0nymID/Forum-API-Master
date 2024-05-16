@@ -10,41 +10,13 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      
     - name: SSH and deploy app
       uses: appleboy/ssh-action@master
       with:
-        host: 34.143.132.52
-        username: sandipermana007
-        key:
-          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
-        port: 22
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/Forum-API-V2-Master
           git pull origin master
